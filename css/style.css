@@ -1,0 +1,329 @@
+/* ? root variables */
+:root {
+    --primary-color: #c72727;
+    --secondary-color: #E99D1F;
+    --light-color: #f3f3f3;
+    --dark-color: #333;
+    --max-width: 1100px;
+}
+
+/* ? category scope variables for articles */
+.category {
+    --sports-color: #E99D1F;
+    --ent-color: #a66bbe;
+    --tech-color: #009cff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5rem;
+    background: var(--light-color);
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+ p {
+    margin: 0.5rem 0;
+ }
+
+/* ? Prevent images from stretching beyond their containers */
+img {
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Staatliches', cursive;
+    margin-bottom: 0.55rem;
+    line-height: 1.3rem;
+}
+
+/* ? Utility classes */
+.container {
+    max-width: var(--max-width);
+    margin: auto;   /* *push content to the middle*/
+    padding: 0 2rem;
+    overflow: hidden; /* *show content --no scrollbars*/
+}
+/* ? Applies to all categories */
+.category {
+    display: inline-block;   /* *so the div doesn't span across*/
+    color: #fff;
+    text-transform: uppercase;  /* *Make the text uppercase*/
+    font-size: 0.6rem;
+    padding: 0.4rem 0.6rem;
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+}
+
+/* ? Colors for category divs */
+.category-sports {
+    background: var(--sports-color);
+}
+
+.category-ent {
+    background: var(--ent-color);
+}
+
+.category-tech {
+    background: var(--tech-color);
+}
+
+/* ? Button styles */
+.btn {
+    display: inline-block;
+    border: none;
+    background: var(--primary-color);  /* *default color*/
+    padding: 0.5rem 1.5rem;
+    color: #fff;
+}
+
+.btn-light { background: var(--light-color) }
+.btn-primary { background: var(--primary-color) }
+.btn-secondary {  background: var(--secondary-color) }
+.btn-dark { background: var(--dark-color) }
+
+/* ? Padding classes */
+.py-1 { padding: 1.5rem 0 }
+.py-2 { padding: 2rem 0 }
+.py-3 { padding: 3rem 0 }
+
+/* ? Block button */
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* ? Hover effect on all buttons */
+.btn:hover {
+    opacity: 0.75;
+}
+
+.card {
+    background: #fff;
+    padding: 1rem;
+}
+
+/* ? Background classes */
+.bg-dark {
+    background: var(--dark-color);
+    color: #fff;
+}
+.bg-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.bg-secondary {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+/* ? utility color for text */
+.light-text {
+    color: #fff;
+}
+
+.list li {
+    padding: 0.5rem 0;
+    border-bottom: #555 dotted 1px;
+    width: 90%;
+}
+
+.list li a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* ? Page container: Inner page grid container */
+.page-container {
+    display:grid;
+    grid-template-columns: 5fr 2fr;
+    margin: 2rem 0;
+    grid-gap: 2rem;
+}
+
+.page-container >*:first-child {
+    grid-row: 1 /span 3; 
+}
+
+.l-heading {
+    font-size: 3rem;
+    margin: 2rem;
+}
+
+/* ? Navbar styling */
+#main-nav {
+    background: #fff;
+    position: sticky;  /* *position based on scroll position*/
+    top: 0;
+    z-index: 2;   /** place it on top of other elements*/
+} 
+
+/* ? Create grid container */
+#main-nav .container {
+    display: grid;
+    grid-template-columns: 6fr 3fr 2fr; /* *create three columns*/
+    padding: 1rem;
+    align-items: center;
+}
+
+/* ? resize image logo */
+#main-nav .logo {
+    width: 180px;
+}
+
+/* ? navbar links */
+#main-nav ul {
+    justify-self: end; /* *push navbar links to the end of the main axis. We can align this since parent(container) is a grid container*/
+    display: flex; /* align navbar li*/
+}
+
+#main-nav ul li a {
+    padding: 0.75rem;
+    font-weight: bold;
+    transition: background 0.3s ease-in;
+}
+
+/* ? Current page styling */
+#main-nav ul li a.current {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+#main-nav ul li a:hover {
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+#main-nav .social {
+    justify-self: center; /* *Move social icons to the center */
+}
+
+#main-nav .social i {
+    margin-right: 0.5rem;
+}
+
+#showcase {
+    color: #fff;
+    background: #333;
+    padding: 2rem;
+    position: relative;
+    
+}
+
+/* ? Image overlay */
+#showcase:before {
+    content: '';
+    background: url('../image_resources/featured.jpg') no-repeat center center/cover;
+    position: absolute;  /* *parent is relative*/
+
+    /* *To display image background -- position relative to the parent*/
+    top: 0; 
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+}
+
+#showcase .showcase-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#showcase .showcase-content {
+    z-index: 1;  /** put the text on top of the image*/
+}
+
+/* ? Move the button down a little bit */
+#showcase .showcase-content p {
+    margin-bottom: 1rem;
+}
+
+/* ? Home Articles --grid container */
+#home-articles .articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* *create 3 columns for the articles (grid-items) each 1fr*/
+    grid-gap: 1rem;
+}
+
+#home-articles .articles-container >*:first-child, /**selecting any element that is directly the first child of .articles-container */
+#home-articles .articles-container >*:last-child {  
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   align-items: center;
+   grid-gap: 1rem;
+   grid-column: 1 /span 2;  /* *span across two columns from the first*/
+  
+}
+
+#home-articles .articles-container >*:last-child {
+    grid-column: 2 /span 2;
+}
+
+/* ? Articles --metatags */
+#about .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eee;
+    padding: 0.5rem;
+}
+#about .meta .category {
+    margin-top: 0.4rem;
+}
+
+/* ? Footer styling */
+#main-footer {
+    background: var(--dark-color);
+    color: #fff;
+    
+}
+
+#main-footer img {
+    width: 150px;
+}
+
+#main-footer a {
+    color: #fff;
+}
+
+#main-footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+}
+
+/* ? Copy Right section */
+#main-footer .footer-container >*:last-child {
+    background: #444;
+    grid-column: 1 / span 4;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+/* ? Subscribe form styling */
+#main-footer .footer-container input[type='email'] {
+    width: 90%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#main-footer .footer-container input[type='submit'] {
+    width: 90%;
+}

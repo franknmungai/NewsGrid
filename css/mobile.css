@@ -1,0 +1,80 @@
+/* ? Custom styling for mobile devices */
+#main-nav .social {
+    display: none; /* *remove social media widgets*/
+}
+
+#main-nav .container {
+    grid-template-columns: 1fr;
+    grid-gap: 1.2rem;
+}
+
+#main-nav ul, #main-nav .logo {
+    justify-self: center;
+}
+
+#main-nav ul li a {
+    padding: 0.5rem;
+}
+
+/* ? From 3 columns to two */
+#home-articles .articles-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#home-articles .articles-container > *:first-child,
+#home-articles .articles-container >*:last-child {
+    grid-template-columns: 1fr;
+    grid-column: 1;
+    
+}
+
+/* ? Adjust atricle text */
+#about .container h1 {
+    font-size: 28px;
+    line-height: 1rem;
+}
+
+/* ? Smartphones */
+@media (max-width: 600px) {
+    /* ? Stack grid items */
+    #showcase .showcase-container,
+    #home-articles .articles-container {
+        grid-template-columns: 1fr;  /* *spans showcase content across*/
+
+    }
+    #showcase .showcase-content {
+        padding-top: -0.5rem;
+        padding-bottom: 3rem;
+    }
+
+    /* ? Clear the spanning footer, then stack footer items */
+    #main-footer .footer-container >*:last-child {
+        grid-column: 1;
+    }  
+
+    #main-footer .footer-container {
+        grid-template-columns: 1fr;
+    }
+    /* ?Add necessary borders to seperate footer items */
+    #main-footer .footer-container >*:first-child,
+    #main-footer .footer-container >*:nth-child(2) {
+        padding-bottom: 1rem;
+        border-bottom: #444 1px dotted;
+    }
+
+    /* ? Stack the about page article and aside */
+    .page-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .page-container h1 {
+        line-height: 2rem !important;
+        font-size: 1.5rem !important;
+    }
+
+    .page-container >*:first-child {
+        grid-row: 1;
+    }
+     
+}

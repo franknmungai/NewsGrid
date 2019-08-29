@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NewsGrid | What's Relevant And Latest</title>
+    
+    <script src="https://kit.fontawesome.com/cf11aada6e.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Staatliches&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+<body>
+    <!-- ? Navbar -->
+    <nav id="main-nav">
+        <!--* Contain everything to the max width we are going to set on this container-->
+        <div class="container">
+            <!-- ? logo -->
+            <img src="/image_resources/logo.png" alt="NewsGrid" class="logo">
+            <!-- ? social media icons -->
+            <div class="social">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+        <!-- ? Menu items -->
+            <ul>
+               <li><a href="index.html" class="current">Home</a></li> 
+               <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ? Showcase -->
+    <header id="showcase">
+        <div class="container">
+            <div class="showcase-container">
+                <div class="showcase-content">
+                    <div class="category category-sports">Sports</div>
+                    <h1>Some Sports Article</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Esse atque, earum accusantium veritatis pariatur qui ipsum,
+                    </p>
+                    <a href="article.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- ? Home Articles -->
+    <section id="home-articles" class="py-2">
+        <div class="container">
+            <h2>Editor Picks</h2>
+            <!-- ? Grid container for articles -->
+            <div class="articles-container">
+
+                <!-- ? Entertainment article: grid container -->
+                <article class="card">
+                    <img src="/image_resources/articles/ent1.jpg" alt="">
+                    <div>
+                        <div class="category category-ent">Entertainment</div>
+                        <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Sit voluptatem eum explicabo neque? Quas cupiditate adipisci 
+                            eum omnis iusto placeat magnam impedit ea, obcaecati totam?
+                        </p>
+                    </div>
+                </article>
+
+                <!-- ? Sports article -->
+                <article class="card bg-dark">
+                    <div class="category category-sports">Sports</div>
+                    <h3 class="light-text"><a href="article.html" class="light-text">Placeat magnam impedit ea</a></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Distinctio officiis eaque ipsum facere, accusantium omnis eum perspiciatis 
+                        sint alias sed dolores. In fugiat delectus saepe.
+                    </p>
+                </article>
+
+                <!-- ? Technology -->
+                <article class="card">
+                    <img src="./image_resources/articles/tech1.jpg">
+                    <div class="category category-tech">Technology</div>
+                    <h3><a href="article.html">Distinctio officiis eaque </a></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                       atque asperiores fugiat blanditiis rem ullam, soluta cupiditate
+                       consequuntur rerum nihil quae architecto, aliquam incidunt unde.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="category category-sports">Sports</div>
+                    <h3><a href="article.html">Aliquam incidunt unde</a></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Recusandae praesentium quasi sequi omnis, voluptates quae 
+                        consectetur perferendis culpa ex voluptate mollitia,
+                        aperiam modi repudiandae explicabo?
+                    </p>
+                    <img src="./image_resources/articles/sports1.jpg">
+                </article>
+
+                <article class="card">
+                    <img src="/image_resources/articles/tech2.jpg">
+                    <div class="category category-tech">Technology</div>
+                    <h3><a href="article.html">Aperiam modi repudiandae explicabo</a></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Illum quo molestias excepturi iusto alias. Assumenda odit 
+                        rerum dignissimos cupiditate quod animi tempora eaque molestiae explicabo.
+                    </p>
+                </article>
+
+                <article class="card bg-primary">
+                    <div class="category category-sports">Sports</div>
+                    <h3><a href="article.html" class="light-text"> Optio accusamus aut autem culpa!</a></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Natus, iusto. Quo quam error voluptate. Labore voluptates 
+                        facilis alias magnam cupiditate id, inventore sint dolor fuga?
+                    </p>
+                </article>
+                <!-- ? Grid container -->
+                <article class="card">
+                    <div>
+                        <div class="category category-ent">Entertainment</div>
+                        <h3><a href="article.html">Quo quam labore voluptate.</a></h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur 
+                            molestias provident reprehenderit id et voluptate repellat pariatur
+                             earum deserunt, voluptatibus, eum itaque, consequuntur tenetur rem.
+                        </p>
+                    </div>
+                    <img src="./image_resources/articles/ent2.jpg">
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ? Footer -->
+    <footer id="main-footer" class="py-2">
+        <!-- ? Grid container -->
+        <div class="container footer-container">
+            <div>
+                <img src="/image_resources/logo_light.png">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                   Accusamus fuga sit pariatur cumque dolor deleniti iste ex repellat dicta,
+                    cupiditate laudantium deserunt maxime vel asperiores?
+                </p>
+            </div>
+            <div>
+                <h3>Email Newsletter</h3>
+                <form> 
+                    <input type="email" placeholder="Your email address">
+                    <input type="submit" value="Subscribe" class="btn btn-primary">
+                </form>
+            </div>
+            <div>
+                <h3>Site Links</h3>
+                <ul class="list">
+                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Join Our Club</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Doloremque beatae placeat aut voluptates vel ullam error id totam eius aperiam.
+                </p>
+                <a href="#" class="btn btn-secondary">Join Now</a>
+            </div>
+            <div>
+                <p>Copyright &copy; 2019. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
